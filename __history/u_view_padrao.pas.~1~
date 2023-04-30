@@ -1,0 +1,24 @@
+unit u_view_padrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  Tview_padrao = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  view_padrao: Tview_padrao;
+
+implementation
+
+{$R *.dfm}
+
+end.

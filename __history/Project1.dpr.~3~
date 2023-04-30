@@ -1,0 +1,18 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  u_form_padrao in 'u_form_padrao.pas' {form_padrao},
+  u_view_padrao in 'u_view_padrao.pas' {view_padrao},
+  u_view_inicial in 'u_view_inicial.pas' {view_inicial};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  //Application.CreateForm(Tform_padrao, form_padrao);
+  //Application.CreateForm(Tview_padrao, view_padrao);
+  Application.CreateForm(Tview_inicial, view_inicial);
+  Application.Run;
+end.

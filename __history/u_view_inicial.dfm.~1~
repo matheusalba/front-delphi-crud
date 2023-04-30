@@ -1,0 +1,13 @@
+inherited view_inicial: Tview_inicial
+  Caption = 'Aplica'#231#227'o'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    ExplicitLeft = 0
+    ExplicitTop = 0
+    ExplicitWidth = 735
+  end
+  inherited Panel2: TPanel
+    ExplicitHeight = 336
+  end
+end

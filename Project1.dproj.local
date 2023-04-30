@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/21 08:04:45.000.937,=C:\Users\Matheus\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 08:15:01.000.652,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_form_padrao.pas=C:\Users\Matheus\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 08:15:01.000.652,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_form_padrao.dfm=C:\Users\Matheus\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/04/21 08:19:30.000.438,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Project1.dproj=C:\Users\Matheus\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/04/21 08:50:14.000.507,=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit2.pas</Transaction>
+    <Transaction>2023/04/21 09:25:16.000.263,=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 09:38:18.000.623,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.dfm=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_view_padrao.dfm</Transaction>
+    <Transaction>2023/04/21 09:38:18.000.623,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_view_padrao.pas</Transaction>
+    <Transaction>2023/04/21 10:02:46.000.806,=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 10:03:24.000.132,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.dfm=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_view_inicial.dfm</Transaction>
+    <Transaction>2023/04/21 10:03:24.000.132,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_view_inicial.pas</Transaction>
+    <Transaction>2023/04/21 12:14:53.000.855,=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 12:16:06.000.539,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.pas=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_form_cadastro_usuario.pas</Transaction>
+    <Transaction>2023/04/21 12:16:06.000.539,C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\Unit1.dfm=C:\Users\Matheus\Desktop\SC - DELPHI - KOTLIN\u_form_cadastro_usuario.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,131 @@
+unit u_form_cadastro_usuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, u_form_padrao, Vcl.StdCtrls,
+  Vcl.ExtCtrls, System.JSON, idHttp, idTCPClient, IdComponent,
+  IdTCPConnection, REST.Types, REST.Client, Data.Bind.Components,
+  Data.Bind.ObjectScope;
+
+type
+  Tform_cadastro_usuario = class(Tform_padrao)
+    fld_name: TEdit;
+    fld_email: TEdit;
+    fld_telefone: TEdit;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
+    procedure btnConfirmarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+    function validarCampos():Boolean; override;
+    procedure gravarRegistro(); override;
+    procedure excluirRegistro(); override;
+    procedure limparCampos; override;
+    function validaEmail(email: String): Boolean;
+    procedure usuarioJson;
+  public
+    { Public declarations }
+  end;
+
+var
+  form_cadastro_usuario: Tform_cadastro_usuario;
+
+implementation
+
+{$R *.dfm}
+
+{ Tform_cadastro_usuario }
+
+procedure Tform_cadastro_usuario.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  limparCampos;
+end;
+
+procedure Tform_cadastro_usuario.btnConfirmarClick(Sender: TObject);
+begin
+  gravarRegistro;
+end;
+
+procedure Tform_cadastro_usuario.btnExcluirClick(Sender: TObject);
+begin
+  inherited;
+  limparCampos;
+end;
+
+procedure Tform_cadastro_usuario.btnSairClick(Sender: TObject);
+begin
+  inherited;
+  form_cadastro_usuario.Close;
+end;
+
+procedure Tform_cadastro_usuario.excluirRegistro;
+begin
+  inherited;
+  limparCampos;
+end;
+
+procedure Tform_cadastro_usuario.gravarRegistro;
+begin
+  inherited;
+  if(validarCampos)then
+  usuarioJson;
+
+end;
+
+procedure Tform_cadastro_usuario.limparCampos;
+begin
+  inherited;
+  campo_nome.Text := '';
+  campo_email.Text := '';
+end;
+
+procedure Tform_cadastro_usuario.usuarioJson;
+var
+s: String;
+begin
+  RESTClient1.BaseURL := 'http://localhost:8080/USUARIO/teste';
+  RESTClient1.ContentType := 'application/json';
+  RESTRequest1.Method := rmPost;
+  RESTRequest1.AddParameter('name',fld_name.Text);
+  RESTRequest1.AddParameter('email',fld_email.Text);
+  RESTRequest1.AddParameter('phone',fld_phone.Text);
+
+  RESTRequest1.Execute;
+  if RESTRequest1.Response.StatusCode <> 200 then
+		ShowMessage(RESTRequest1.Response.StatusCode.ToString + ' - ' + RESTRequest1.Response.StatusText)
+  else
+    ShowMessage(RESTRequest1.Response.JSONText);
+end;
+
+function Tform_cadastro_usuario.validaEmail(email : String): Boolean;
+begin
+   email := Trim(UpperCase(email));
+  if Pos('@', email) > 1 then begin
+    Delete(email, 1, pos('@', email));
+    Result := (Length(email) > 0) and (Pos('.', email) > 2) and (Pos(' ', email) = 0);
+  end else begin
+    Result := False;
+  end;
+end;
+
+function Tform_cadastro_usuario.validarCampos: Boolean;
+begin
+  if(campo_nome.Text <> '') and (validaEmail(campo_email.Text)) and  (Length(campo_telefone.Text)=11) then
+  begin
+    Result := True;
+  end
+  else
+  begin
+  showmessage('Campos não validados');
+  Result := False;
+  end;
+end;
+
+end.

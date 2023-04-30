@@ -1,0 +1,25 @@
+unit u_view_inicial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, u_view_padrao, Vcl.Menus, Vcl.ExtCtrls,
+  Vcl.Buttons;
+
+type
+  Tview_inicial = class(Tview_padrao)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  view_inicial: Tview_inicial;
+
+implementation
+
+{$R *.dfm}
+
+end.
